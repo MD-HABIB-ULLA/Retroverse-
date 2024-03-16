@@ -26,10 +26,10 @@ const FoodTable = ({ cook, removeToTableToCook, cooking }) => {
             return (
               <tr key={index} className="text-left">
                 <td className="p-1">{index + 1}</td>
-                <td className="p-1">{data.name}</td>
-                <td className="p-1">{data.preparing_time} minutes</td>
-                <td className="p-1">{data.calories} calories</td>
-                <td className="p-1">
+                <td className="p-1 text-gray-600">{data.name}</td>
+                <td className="p-1 text-gray-600">{data.preparing_time} minutes</td>
+                <td className="p-1 text-gray-600">{data.calories} calories</td>
+                <td className="p-1 text-gray-600">
                   <button
                     className="btn bg-[#0BE58A] outline-none border-none rounded-lg"
                     onClick={() => {
@@ -67,9 +67,9 @@ const FoodTable = ({ cook, removeToTableToCook, cooking }) => {
             return (
               <tr key={index} className="text-left">
                 <td className="p-1">{index + 1}</td>
-                <td className="p-1">{data.name}</td>
-                <td className="p-1">{data.preparing_time} minutes</td>
-                <td className="p-1">{data.calories} calories</td>
+                <td className="p-1 text-gray-600">{data.name}</td>
+                <td className="p-1 text-gray-600">{data.preparing_time} minutes</td>
+                <td className="p-1 text-gray-600">{data.calories} calories</td>
               </tr>
             );
           })}
@@ -77,11 +77,11 @@ const FoodTable = ({ cook, removeToTableToCook, cooking }) => {
           <tr className={`text-left w-full ${totalTime === 0 ? "hidden" : ""}`}>
             <td className="p-1"></td>
             <td className="p-1"></td>
-            <td className="p-1">
+            <td className="p-1 text-gray-600">
               Total Time = <br />
               {totalTime} minutes
             </td>
-            <td className="p-1">
+            <td className="p-1 text-gray-600">
               Total Calories <br /> = {totalCalories} calories
             </td>
           </tr>

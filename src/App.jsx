@@ -4,14 +4,15 @@ import Navber from "./header/Navber";
 import AllFoods from "./main/AllFoods";
 import OurResepi from "./main/OurResepi";
 
+
 function App() {
   return (
     <>
-      <header>
+      <header className="lexend">
         <Navber></Navber>
         <Banner></Banner>
       </header>
-      <main>
+      <main className="lexend">
         <OurResepi></OurResepi>
         <AllFoods></AllFoods>
       </main>
