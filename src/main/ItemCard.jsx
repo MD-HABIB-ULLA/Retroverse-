@@ -19,7 +19,7 @@ const ItemCard = ({ food,addToTableToCook }) => {
         <p>{short_description}</p>
         <h2 className="font-bold">Ingredients: {ingredients.length}</h2>
         <ul className="list-disc pl-7">
-          {ingredients.slice(0,3).map((ingredient, index) => {
+          {ingredients.map((ingredient, index) => {
             return <li key={index}>{ingredient}</li>;
           })}
         </ul>
