@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const ItemCard = ({ food }) => {
+const ItemCard = ({ food,addToTableToCook }) => {
   const {
     name,
     image,
@@ -34,7 +34,10 @@ const ItemCard = ({ food }) => {
           </div>
         </div>
         <div className="card-actions ">
-          <button className="btn bg-[#0BE58A] outline-none border-none  rounded-full">
+          <button 
+          className="btn bg-[#0BE58A] outline-none border-none  rounded-full"
+          onClick={()=>addToTableToCook(food)}
+          >
             Want to Cook
           </button>
         </div>
@@ -44,6 +47,7 @@ const ItemCard = ({ food }) => {
 };
 ItemCard.propTypes = {
   food: PropTypes.object.isRequired,
+  addToTableToCook: PropTypes.func.isRequired,
 };
 
 export default ItemCard;

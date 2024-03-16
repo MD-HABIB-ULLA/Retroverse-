@@ -41,7 +41,9 @@ const Navber = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost md:text-3xl text-xl font-bold ">Chefs Palette</a>
+        <a className="btn btn-ghost md:text-3xl text-xl font-bold ">
+          Chefs Palette
+        </a>
       </div>
       <div className=" hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
