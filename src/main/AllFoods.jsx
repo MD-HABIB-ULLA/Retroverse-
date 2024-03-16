@@ -2,6 +2,8 @@ import { useState } from "react";
 import FoodDisplay from "./FoodDisplay";
 import FoodTable from "./FoodTable";
 import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AllFoods = () => {
   const [foods, setFoods] = useState([]);
@@ -13,7 +15,7 @@ const AllFoods = () => {
     if (!isFoodItem) {
       setCook((cook) => [...cook, foodItem]);
     } else {
-      alert("fuck you");
+      toast("You already selected this item.");
     }
   };
   const removeToTableToCook = (foodItem) => {
@@ -42,6 +44,7 @@ const AllFoods = () => {
         
       ></FoodDisplay>
       <FoodTable cook={cook} removeToTableToCook={removeToTableToCook} cooking={cooking}></FoodTable>
+      <ToastContainer />
     </div>
   );
 };

@@ -31,7 +31,7 @@ const FoodTable = ({ cook, removeToTableToCook, cooking }) => {
                 <td className="p-1">{data.calories} calories</td>
                 <td className="p-1">
                   <button
-                    className="btn bg-[#0BE58A] outline-none border-none rounded-full"
+                    className="btn bg-[#0BE58A] outline-none border-none rounded-lg"
                     onClick={() => {
                       removeToTableToCook(data);
                       setTotalCalories(
